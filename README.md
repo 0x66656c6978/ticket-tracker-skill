@@ -40,7 +40,7 @@ opens the repo, add to that project's `.claude/settings.json`:
     "ticket-tracker": {
       "source": {
         "source": "github",
-        "repo": "<your-github-username>/ticket-tracker"
+        "repo": "0x66656c6978/ticket-tracker-skill"
       }
     }
   },
@@ -53,7 +53,7 @@ opens the repo, add to that project's `.claude/settings.json`:
 Or install it into just your own Claude Code, everywhere, with:
 
 ```bash
-claude plugin marketplace add <your-github-username>/ticket-tracker
+claude plugin marketplace add 0x66656c6978/ticket-tracker-skill
 claude plugin install ticket-tracker@ticket-tracker
 ```
 

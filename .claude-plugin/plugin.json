@@ -3,6 +3,6 @@
   "description": "File-based ticket tracking for repos where AI agents do a lot of the work: tickets live as markdown files moved between open/in_progress/blocked/finished folders, each carrying metadata, a Definition of Done, and an append-only log.",
   "version": "1.0.0",
   "author": {
-    "name": "Felix"
+    "name": "0x66656c6978"
   }
 }
