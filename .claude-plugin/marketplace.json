@@ -1,0 +1,12 @@
+{
+  "name": "ticket-tracker",
+  "owner": {
+    "name": "Felix"
+  },
+  "plugins": [
+    {
+      "name": "ticket-tracker",
+      "source": "./"
+    }
+  ]
+}
