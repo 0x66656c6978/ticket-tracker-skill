@@ -19,6 +19,16 @@ A ticket's location *is* its status. Moving a ticket between folders is
 how its state changes — there is no separate status field to keep in
 sync with the folder.
 
+Each ticket's YAML frontmatter conforms to
+[OKF v0.1](https://okf.md/spec/) (Google's Open Knowledge Format,
+published 2026-06-12) — a directory of markdown files with YAML
+frontmatter where the only required field is `type`, and `title`,
+`description`, `resource`, `tags`, and `timestamp` are recommended.
+This means any OKF-aware tool or agent can read this repo's tickets
+without special-casing this project's format. `id`, `priority`, and
+`links` are producer-defined extensions, which OKF explicitly permits
+and requires consumers to preserve.
+
 ## Creating a ticket
 
 1. Copy `template.md` (bundled with this skill) into `tickets/open/<slug>.md`,
@@ -76,6 +86,18 @@ at the bottom), each starting with the date:
 
 - One ticket = one markdown file. Filename and `id` in the metadata
   block should match.
+- `type` is always `ticket`. This is the field OKF requires — don't
+  remove or repurpose it.
+- `description` in the metadata block is a single-line summary (for
+  previews and index generation, per OKF); it's not a substitute for
+  the full `## Description` section below it.
+- `timestamp` is OKF's field for "last significant change" — bump it
+  (a bare date is precise enough) any time you touch metadata, the
+  DoD, or add a Log entry, the same way `updated` worked before OKF.
+- `resource` is optional and omitted by default — OKF treats it as the
+  canonical URI of an external asset the document describes, so only
+  set it when a ticket mirrors an issue in an external tracker
+  (GitHub, Jira, etc).
 - `priority` is one of `P1` (urgent), `P2` (normal), `P3` (someday).
 - `links` can hold related ticket ids, PR URLs, or commit SHAs — use it
   instead of vague prose references where possible.
