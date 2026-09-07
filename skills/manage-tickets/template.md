@@ -1,11 +1,13 @@
 ---
+type: ticket
 id: <kebab-case-slug>
 title: <short, specific title>
+description: <one-line summary, for previews and index generation>
 priority: P1 | P2 | P3
-created: YYYY-MM-DD
-updated: YYYY-MM-DD
 tags: []
 links: []
+created: YYYY-MM-DD
+timestamp: YYYY-MM-DD
 ---
 
 ## Description
